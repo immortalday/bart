@@ -1,9 +1,27 @@
 #!/usr/bin/bash
 
+# for cron
+# 0 1 * * * <path to bart script> >/dev/null 2>&1
+# 
+
+# chmod 700 <path to folder with  BART_MANIFESTS>
+# chown -R root:sys <path to folder with  BART_MANIFESTS>
+
+# examples
+# chmod 700 /opt/bart
+# chown -R root:sys /opt/bart
+
+# chown root:sys <path to bart rules>
+# chmod 600 <path to bart rules>
+
+# examples
+# chown root:sys /etc/bart.rules
+# chmod 600 /etc/bart.rules
+
 
 SYSLOG_PRIORITY=audit.err
 BART_RULES=/etc/bart.rules
-BART_MANIFESTS=/var/tmp
+BART_MANIFESTS=/opt/bart
 
 
 #
@@ -69,4 +87,5 @@ done
 # Finally, rotate for the next run
 #
 /usr/bin/mv $BART_MANIFESTS/bart.manifest.1 $BART_MANIFESTS/bart.manifest.0
+
 

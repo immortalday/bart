@@ -21,3 +21,13 @@ IGNORE dirmtime
 /kernel
 
 /boot
+
+/var/adm
+
+/export/home/way4/way4app/appserver/applications/tswitch/webapps/tswitch/WEB-INF/conf/application 
+
+/export/home/way4/way4app/appserver/applications/access_server1/conf 
+
+/export/home/way4/way4app/appserver/applications/access_server2/conf 
+
+/export/home/way4/netserv/conf
